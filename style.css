@@ -156,7 +156,7 @@ a{color:var(--amber);text-decoration:none;}
 .btn-amber:hover{
   transform:translateY(-2px);
   box-shadow:0 8px 20px rgba(242,169,59,0.25);
-  color:#191307;
+  color: #fff3cd;
 }
 .btn-outline-custom{
   border:1px solid var(--line);
