@@ -1,615 +1,687 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Saif Mohamed — Junior Backend Developer</title>
+    <title>Saif Mohamed — Junior Backend Developer</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
 
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Devicon -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    >
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
 
-<!-- Devicon -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="grid-bg"></div>
+<!-- ================= NAVBAR ================= -->
 
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
 
-<!-- NAV -->
-<nav class="navbar navbar-custom navbar-expand-md">
-  <div class="container">
+        <a class="navbar-brand" href="#home">
+            Saif<span>.</span>
+        </a>
 
-    <a class="brand" href="#home" data-page="home">
-      saif<span>.dev</span>
-    </a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <button class="nav-toggle d-md-none" id="navToggle" aria-label="menu">
-      ☰
-    </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
 
-    <div class="nav-links" id="navLinks">
-      <a class="nav-link active" href="#home" data-page="home">home</a>
-      <a class="nav-link" href="#about" data-page="about">about</a>
-      <a class="nav-link" href="#skills" data-page="skills">skills</a>
-      <a class="nav-link" href="#projects" data-page="projects">projects</a>
-      <a class="nav-link" href="#contact" data-page="contact">contact</a>
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
     </div>
-
-  </div>
 </nav>
 
 
-<!-- HOME PAGE -->
-<section class="page hero" id="home">
-  <div class="container">
+<!-- ================= HOME ================= -->
 
-    <div class="row align-items-center g-5">
+<section id="home" class="hero-section">
 
-      <div class="col-lg-7">
+    <div class="container">
 
-        <div class="eyebrow">// junior backend developer</div>
+        <div class="hero-content">
 
-        <h1>
-          Saif Mohamed<br>
-          builds things on the <span class="accent">server side.</span>
-        </h1>
+            <p class="hero-small">Hello, I'm</p>
 
-        <p class="lead-text">
-          Junior backend developer focused on clean logic, solid data structures,
-          and APIs that don't fall over. Comfortable moving between C++, Python,
-          and JavaScript depending on what the problem actually needs — and
-          building the interfaces on top with HTML, CSS, and Bootstrap.
-        </p>
+            <h1>
+                Saif Mohamed
+            </h1>
 
-        <div class="d-flex gap-3 mt-4 flex-wrap">
-
-          <a href="#projects" data-page="projects" class="btn-amber page-link">
-            View Projects
-          </a>
-
-          <a href="#contact" data-page="contact" class="btn-outline-custom page-link">
-            Get In Touch
-          </a>
-
-        </div>
-
-        <div class="stat-row mt-5">
-
-          <div class="stat">
-            <b>3</b>
-            <span>core languages</span>
-          </div>
-
-          <div class="stat">
-            <b>6+</b>
-            <span>tools & frameworks</span>
-          </div>
-
-          <div class="stat">
-            <b>2</b>
-            <span>projects shipped</span>
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="col-lg-5">
-
-        <div class="terminal">
-
-          <div class="terminal-head">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-            <span class="terminal-title">saif@backend: ~</span>
-          </div>
-
-          <div class="terminal-body" id="termBody"></div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ABOUT PAGE -->
-<section class="page" id="about">
-  <div class="container">
-
-    <div class="row g-5 align-items-start">
-
-      <div class="col-lg-4 text-center text-lg-start">
-
-        <div class="avatar-wrap mx-auto mx-lg-0">
-          <img src="image.png" alt="Saif Mohamed" class="avatar-img" id="avatarImg">
-        </div>
-
-        <div class="info-list mt-4">
-
-          <div class="info-row">
-            <span class="info-label">Name</span>
-            <span class="info-val">Saif Mohamed</span>
-          </div>
-
-          <div class="info-row">
-            <span class="info-label">Role</span>
-            <span class="info-val">Junior Backend Developer</span>
-          </div>
-
-          <div class="info-row">
-            <span class="info-label">Based in</span>
-            <span class="info-val">Egypt</span>
-          </div>
-
-          <div class="info-row">
-            <span class="info-label">Status</span>
-            <span class="info-val status-open">Open to work</span>
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="col-lg-8">
-
-        <div class="section-label">about</div>
-
-        <h2 class="section-title">
-          Still early, already building.
-        </h2>
-
-        <p class="about-text">
-          I'm Saif — a junior backend developer who enjoys the part of software
-          most people never see, the logic underneath the interface. I like
-          reasoning through algorithms and memory management in C++, moving fast
-          in Python for scripts and prototypes, and using JavaScript to connect
-          the backend to something people can actually click on. On the front end
-          I keep things simple and structured with HTML, CSS, and Bootstrap.
-        </p>
-
-        <p class="about-text">
-          I'm not chasing a single framework — I'm building a foundation.
-          Right now that means writing backend code that's readable, testable,
-          and doesn't do anything clever just to look clever, while getting
-          comfortable with the tools every backend engineer ends up using:
-          version control, databases, and real APIs.
-        </p>
-
-
-        <div class="section-label mt-5">
-          education
-        </div>
-
-        <div class="timeline">
-
-          <div class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-              <div class="timeline-title">
-                Computer Science / Related Degree
-              </div>
-
-              <div class="timeline-sub">
-                University Name — replace with yours
-              </div>
-
-              <div class="timeline-desc">
-                Coursework in data structures, algorithms, OOP (C++), and databases.
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="section-label mt-5">
-          experience
-        </div>
-
-        <div class="timeline">
-
-          <div class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-              <div class="timeline-title">
+            <h2>
                 Junior Backend Developer
-              </div>
+            </h2>
 
-              <div class="timeline-sub">
-                Company / Internship name — replace with yours
-              </div>
+            <p class="hero-description">
+                I build software projects and learn new technologies
+                to improve my programming skills.
+            </p>
 
-              <div class="timeline-desc">
-                Worked on backend logic, and picked up habits around clean,
-                testable code.
-              </div>
+            <div class="hero-buttons">
 
-            </div>
+                <a href="#projects" class="btn-main">
+                    View Projects
+                </a>
 
-          </div>
-
-
-          <div class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-              <div class="timeline-title">
-                Self-Directed Projects
-              </div>
-
-              <div class="timeline-sub">
-                2025 — Present
-              </div>
-
-              <div class="timeline-desc">
-                Built small backend and full-stack projects in C++, Python,
-                and JavaScript to practice real-world problem solving.
-              </div>
+                <a href="#contact" class="btn-outline">
+                    Contact Me
+                </a>
 
             </div>
 
-          </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>about me</p>
+
+            <h2>Who I Am.</h2>
 
         </div>
 
-      </div>
+        <div class="about-content">
+
+            <div class="about-text">
+
+                <p>
+                    I'm Saif Mohamed, a software student interested in
+                    backend development and programming.
+                </p>
+
+                <p>
+                    I enjoy building projects, solving problems, and
+                    learning new technologies.
+                </p>
+
+            </div>
+
+            <div class="about-info">
+
+                <div class="info-box">
+                    <span>Track</span>
+                    <strong>Software</strong>
+                </div>
+
+                <div class="info-box">
+                    <span>School</span>
+                    <strong>EVA School</strong>
+                </div>
+
+                <div class="info-box">
+                    <span>Location</span>
+                    <strong>Giza, Egypt</strong>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
-  </div>
 </section>
 
 
-<!-- SKILLS PAGE -->
-<section class="page" id="skills">
-  <div class="container">
+<!-- ================= SKILLS ================= -->
 
-    <div class="section-label">
-      skills
+<section id="skills" class="section skills-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>skills</p>
+
+            <h2>What I Work With.</h2>
+
+            <span>
+                Technologies, tools, and concepts I use while building
+                software projects.
+            </span>
+
+        </div>
+
+
+        <!-- ================= WEB SKILLS ================= -->
+
+        <div class="skill-category">
+
+            <button class="skill-category-button" type="button">
+                <span>Web Skills</span>
+
+                <span class="skill-arrow">
+                    +
+                </span>
+            </button>
+
+
+            <div class="skill-category-content">
+
+                <div class="skills-grid">
+
+                    <!-- HTML -->
+                    <div class="skill-box">
+
+                        <i class="devicon-html5-plain colored skill-image"></i>
+
+                        <h3>HTML5</h3>
+
+                    </div>
+
+
+                    <!-- CSS -->
+                    <div class="skill-box">
+
+                        <i class="devicon-css3-plain colored skill-image"></i>
+
+                        <h3>CSS3</h3>
+
+                    </div>
+
+
+                    <!-- Bootstrap -->
+                    <div class="skill-box">
+
+                        <i class="devicon-bootstrap-plain colored skill-image"></i>
+
+                        <h3>Bootstrap</h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PROGRAMMING SKILLS ================= -->
+
+        <div class="skill-category">
+
+            <button class="skill-category-button" type="button">
+
+                <span>Programming Skills</span>
+
+                <span class="skill-arrow">
+                    +
+                </span>
+
+            </button>
+
+
+            <div class="skill-category-content">
+
+                <div class="skills-grid">
+
+                    <!-- C++ -->
+                    <div class="skill-box">
+
+                        <i class="devicon-cplusplus-plain colored skill-image"></i>
+
+                        <h3>C++</h3>
+
+                    </div>
+
+
+                    <!-- Python -->
+                    <div class="skill-box">
+
+                        <i class="devicon-python-plain colored skill-image"></i>
+
+                        <h3>Python</h3>
+
+                    </div>
+
+
+                    <!-- JavaScript -->
+                    <div class="skill-box">
+
+                        <i class="devicon-javascript-plain colored skill-image"></i>
+
+                        <h3>JavaScript</h3>
+
+                    </div>
+
+
+                    <!-- Node -->
+                    <div class="skill-box">
+
+                        <i class="devicon-nodejs-plain colored skill-image"></i>
+
+                        <h3>Node.js</h3>
+
+                    </div>
+
+
+                    <!-- Express -->
+                    <div class="skill-box">
+
+                        <i class="devicon-express-original skill-image"></i>
+
+                        <h3>Express.js</h3>
+
+                    </div>
+
+
+                    <!-- OOP -->
+                    <div class="skill-box">
+
+                        <div class="custom-skill-icon">
+                            OOP
+                        </div>
+
+                        <h3>OOP</h3>
+
+                    </div>
+
+
+                    <!-- Data Structures -->
+                    <div class="skill-box">
+
+                        <div class="custom-skill-icon">
+                            DS
+                        </div>
+
+                        <h3>Data Structures</h3>
+
+                    </div>
+
+
+                    <!-- Algorithms -->
+                    <div class="skill-box">
+
+                        <div class="custom-skill-icon">
+                            λ
+                        </div>
+
+                        <h3>Algorithms</h3>
+
+                    </div>
+
+
+                    <!-- Problem Solving -->
+                    <div class="skill-box">
+
+                        <div class="custom-skill-icon">
+                            PS
+                        </div>
+
+                        <h3>Problem Solving</h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= DATABASE SKILLS ================= -->
+
+        <div class="skill-category">
+
+            <button class="skill-category-button" type="button">
+
+                <span>Database Skills</span>
+
+                <span class="skill-arrow">
+                    +
+                </span>
+
+            </button>
+
+
+            <div class="skill-category-content">
+
+                <div class="skills-grid">
+
+                    <!-- MySQL -->
+                    <div class="skill-box">
+
+                        <i class="devicon-mysql-plain colored skill-image"></i>
+
+                        <h3>MySQL</h3>
+
+                    </div>
+
+
+                    <!-- Database -->
+                    <div class="skill-box">
+
+                        <div class="custom-skill-icon">
+                            DB
+                        </div>
+
+                        <h3>Database</h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= TOOLS ================= -->
+
+        <div class="skill-category">
+
+            <button class="skill-category-button" type="button">
+
+                <span>Tools & Software</span>
+
+                <span class="skill-arrow">
+                    +
+                </span>
+
+            </button>
+
+
+            <div class="skill-category-content">
+
+                <div class="skills-grid">
+
+                    <!-- Git -->
+                    <div class="skill-box">
+
+                        <i class="devicon-git-plain colored skill-image"></i>
+
+                        <h3>Git</h3>
+
+                    </div>
+
+
+                    <!-- GitHub -->
+                    <div class="skill-box">
+
+                        <i class="devicon-github-original skill-image"></i>
+
+                        <h3>GitHub</h3>
+
+                    </div>
+
+
+                    <!-- VS Code -->
+                    <div class="skill-box">
+
+                        <i class="devicon-vscode-plain colored skill-image"></i>
+
+                        <h3>VS Code</h3>
+
+                    </div>
+
+
+                    <!-- Linux -->
+                    <div class="skill-box">
+
+                        <i class="devicon-linux-plain skill-image"></i>
+
+                        <h3>Linux / Bash</h3>
+
+                    </div>
+
+
+                    <!-- Postman -->
+                    <div class="skill-box">
+
+                        <i class="devicon-postman-plain colored skill-image"></i>
+
+                        <h3>Postman</h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <h2 class="section-title">
-      What I work with.
-    </h2>
-
-    <p class="about-text mb-5">
-      Technologies, tools, and concepts I use while building software projects.
-    </p>
-
-
-    <div class="skills-grid">
-
-      <!-- C++ -->
-      <div class="skill-box">
-        <i class="devicon-cplusplus-plain skill-icon"></i>
-        <h3>C++</h3>
-      </div>
-
-
-      <!-- Python -->
-      <div class="skill-box">
-        <i class="devicon-python-plain skill-icon"></i>
-        <h3>Python</h3>
-      </div>
-
-
-      <!-- JavaScript -->
-      <div class="skill-box">
-        <i class="devicon-javascript-plain skill-icon"></i>
-        <h3>JavaScript</h3>
-      </div>
-
-
-      <!-- HTML -->
-      <div class="skill-box">
-        <i class="devicon-html5-plain skill-icon"></i>
-        <h3>HTML5</h3>
-      </div>
-
-
-      <!-- CSS -->
-      <div class="skill-box">
-        <i class="devicon-css3-plain skill-icon"></i>
-        <h3>CSS3</h3>
-      </div>
-
-
-      <!-- Bootstrap -->
-      <div class="skill-box">
-        <i class="devicon-bootstrap-plain skill-icon"></i>
-        <h3>Bootstrap</h3>
-      </div>
-
-
-      <!-- Node.js -->
-      <div class="skill-box">
-        <i class="devicon-nodejs-plain skill-icon"></i>
-        <h3>Node.js</h3>
-      </div>
-
-
-      <!-- Express -->
-      <div class="skill-box">
-        <i class="devicon-express-original skill-icon"></i>
-        <h3>Express.js</h3>
-      </div>
-
-
-      <!-- MySQL -->
-      <div class="skill-box">
-        <i class="devicon-mysql-plain skill-icon"></i>
-        <h3>MySQL</h3>
-      </div>
-
-
-      <!-- Git -->
-      <div class="skill-box">
-        <i class="devicon-git-plain skill-icon"></i>
-        <h3>Git</h3>
-      </div>
-
-
-      <!-- GitHub -->
-      <div class="skill-box">
-        <i class="devicon-github-original skill-icon"></i>
-        <h3>GitHub</h3>
-      </div>
-
-
-      <!-- VS Code -->
-      <div class="skill-box">
-        <i class="devicon-vscode-plain skill-icon"></i>
-        <h3>VS Code</h3>
-      </div>
-
-
-      <!-- Linux -->
-      <div class="skill-box">
-        <i class="devicon-linux-plain skill-icon"></i>
-        <h3>Linux / Bash</h3>
-      </div>
-
-
-      <!-- Postman -->
-      <div class="skill-box">
-        <i class="devicon-postman-plain skill-icon"></i>
-        <h3>Postman</h3>
-      </div>
-
-
-      <!-- OOP -->
-      <div class="skill-box">
-        <div class="skill-symbol">OOP</div>
-        <h3>OOP</h3>
-      </div>
-
-
-      <!-- Data Structures -->
-      <div class="skill-box">
-        <div class="skill-symbol">&lt;/&gt;</div>
-        <h3>Data Structures</h3>
-      </div>
-
-
-      <!-- Algorithms -->
-      <div class="skill-box">
-        <div class="skill-symbol">λ</div>
-        <h3>Algorithms</h3>
-      </div>
-
-    </div>
-
-  </div>
 </section>
 
 
-<!-- PROJECTS PAGE -->
-<section class="page" id="projects">
-  <div class="container">
+<!-- ================= PROJECTS ================= -->
 
-    <div class="section-label">
-      projects
+<section id="projects" class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>projects</p>
+
+            <h2>Featured Projects.</h2>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- Todo API -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    01
+                </div>
+
+                <h3>
+                    Todo API
+                </h3>
+
+                <p>
+                    A REST API built with Node.js and Express.js for
+                    managing tasks and tracking task statistics.
+                </p>
+
+                <div class="project-tags">
+
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>REST API</span>
+
+                </div>
+
+                <a
+                    href="https://github.com/bvdwsuxci-sketch/Todo-API"
+                    target="_blank"
+                >
+                    View Demo →
+                </a>
+
+            </div>
+
+
+            <!-- Neighborhood Store -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    02
+                </div>
+
+                <h3>
+                    Neighborhood Store
+                </h3>
+
+                <p>
+                    A software project for managing products and
+                    store operations in a simple and organized way.
+                </p>
+
+                <div class="project-tags">
+
+                    <span>Software</span>
+                    <span>Database</span>
+                    <span>Programming</span>
+
+                </div>
+
+                <a
+                    href="https://github.com/bvdwsuxci-sketch/Neighborhood-Store"
+                    target="_blank"
+                >
+                    View Demo →
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <h2 class="section-title">
-      Selected work.
-    </h2>
-
-    <p class="about-text mb-5">
-      A selection of backend projects built with Node.js, Express,
-      and REST APIs.
-    </p>
+</section>
 
 
-    <div class="row g-4">
+<!-- ================= CONTACT ================= -->
 
-      <!-- TODO API -->
-      <div class="col-md-6">
+<section id="contact" class="section contact-section">
 
-        <div class="project-card">
+    <div class="container">
 
-          <div class="project-num">
-            01
-          </div>
+        <div class="section-title">
 
-          <h3>Todo API</h3>
+            <p>contact me</p>
 
-          <p>
-            A REST API for managing tasks with Node.js and Express.
-            It supports creating, viewing, updating, completing,
-            and deleting tasks.
-          </p>
+            <h2>Let's Connect.</h2>
 
-          <div class="tag-row">
+        </div>
 
-            <span class="tag">Node.js</span>
-            <span class="tag">Express.js</span>
-            <span class="tag">REST API</span>
-            <span class="tag">JSON</span>
+        <p class="contact-text">
+            I'm passionate about learning, building projects,
+            and improving my skills every day.
+            Feel free to reach out!
+        </p>
 
-          </div>
 
-          <div class="mt-3">
+        <div class="contact-links">
 
-            <a
-              href="https://github.com/bvdwsuxci-sketch/Todo-API"
-              target="_blank"
-              class="tag"
-            >
-              View on GitHub →
+            <a href="mailto:bvdwsuxci@gmail.com">
+                Email
             </a>
 
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- NEIGHBORHOOD STORE -->
-      <div class="col-md-6">
-
-        <div class="project-card">
-
-          <div class="project-num">
-            02
-          </div>
-
-          <h3>Neighborhood Store</h3>
-
-          <p>
-            A small store management system for products and customer
-            orders. It includes product management, stock checking,
-            order creation, and order status management.
-          </p>
-
-          <div class="tag-row">
-
-            <span class="tag">Node.js</span>
-            <span class="tag">Express.js</span>
-            <span class="tag">REST API</span>
-            <span class="tag">JSON</span>
-
-          </div>
-
-          <div class="mt-3">
-
             <a
-              href="https://github.com/bvdwsuxci-sketch/Neighborhood-Store"
-              target="_blank"
-              class="tag"
+                href="https://github.com/bvdwsuxci-sketch"
+                target="_blank"
             >
-              View on GitHub →
+                GitHub
             </a>
 
-          </div>
+            <a
+                href="https://www.linkedin.com/in/saif-mohamed-101193416/"
+                target="_blank"
+            >
+                LinkedIn
+            </a>
 
         </div>
 
-      </div>
-
     </div>
 
-  </div>
 </section>
 
 
-<!-- CONTACT PAGE -->
-<section class="page" id="contact">
-
-  <div class="container">
-
-    <div class="contact-box">
-
-      <div
-        class="section-label"
-        style="justify-content:center;"
-      >
-        contact
-      </div>
-
-      <h2
-        class="section-title"
-        style="margin-bottom:0.5rem;"
-      >
-        Let's talk backend.
-      </h2>
-
-      <p
-        class="about-text mx-auto"
-        style="text-align:center;"
-      >
-        Open to junior backend roles and internships.
-        Reach out below.
-      </p>
-
-      <div class="contact-links">
-
-        <a
-          href="mailto:bvdwsuxci@gmail.com"
-          target="_blank"
-        >
-          email
-        </a>
-
-        <a
-          href="https://github.com/bvdwsuxci-sketch"
-          target="_blank"
-        >
-          github
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/saif-mohamed-101193416/"
-          target="_blank"
-        >
-          linkedin
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
+<!-- ================= FOOTER ================= -->
 
 <footer>
-  built by Saif Mohamed
+
+    <p>
+        © 2026 Saif Mohamed • Built with HTML, CSS & JavaScript
+    </p>
+
 </footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- ================= SKILLS ACCORDION JS ================= -->
+
+<script>
+
+    const skillButtons =
+        document.querySelectorAll(".skill-category-button");
+
+    skillButtons.forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+            const category =
+                button.parentElement;
+
+            category.classList.toggle("active");
+
+        });
+
+    });
+
+</script>
 
 </body>
 </html>
-```
